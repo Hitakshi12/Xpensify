@@ -1,0 +1,224 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* all similar content styling codes */
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* navbar styling */
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+.navbar.sticky{
+    padding: 15px 0;
+    background: white;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #000000;
+    font-size: 40px;
+    font-weight: 600;
+    
+    
+}
+.navbar .logo a span{
+    color: teal;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: teal;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: teal;
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: rgb(66, 41, 71);
+    display: inline-flex;
+    transition: 0.2s;
+}
+.navbar.sticky .menu li a:hover{
+    color: rgb(66, 41, 71);
+}
+
+/* menu btn styling */
+.menu-btn{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.container{
+    width:100%;
+    padding:20px 40px;
+    border-radius: 5px;
+}
+.img{
+    float: left;
+    display: flex;
+    opacity: 0.8;
+    width:60%;
+}
+
+
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: -10px;
+}
+form .user-details .input-box{
+    margin:20px 0 12px 0;
+   width:calc(100%/2 - 20px);
+}
+.details{
+    display:block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.input-box input{
+    height:45px;
+    width:100%;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+}
+.input-box input:focus,
+.input-box input:valid{
+    border-color:teal;
+}
+.extra-details {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+
+}
+.extra-details .exdetails{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.extra-details .category2{
+    margin-top: 12px;;
+    display:inline-flexbox;
+    justify-content: space-between;
+}
+.extra-details .category2 input{
+    height:25px;
+    width:15%;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size: 14px;
+    border-bottom-width: 2px;
+
+}
+.button{
+    height:100px;
+    cursor: pointer;
+    margin: 3%;
+    
+
+}
+.button{
+    height: 1000%;
+    width:20%;
+    outline: none;
+    color: #fff;
+    border:none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing:1px;
+    background: teal;
+    border-radius: 20px;
+    padding: 10px 30px;
+    transition: all 0.3 linear;
+}
+.button:hover{
+    background-color:rgb(22, 202, 202);
+    color: white;
+
+}
+/* responsive media query start */
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 947px){
+    .menu-btn{
+        display: block;
+        z-index: 999;
+        color: #111;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+        color: white;
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: rgb(168, 167, 165);
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    
+}
+
